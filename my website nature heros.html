@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d2b">
+  <meta name="description" content="Nature Heroes is a free worldwide learning hub for protecting trees, saving water and caring for our planet.">
+  <title>Nature Heroes | Small Actions, Greener Planet</title>
+  <style>
+    :root{--forest:#173d2b;--leaf:#2f7049;--mint:#e8f2e7;--cream:#fbf8ef;--gold:#e6b957;--ink:#203329;--muted:#617168;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+    a{color:inherit} .wrap{width:min(1120px,92%);margin:auto}
+    header{background:var(--forest);color:white;position:sticky;top:0;z-index:5;box-shadow:0 3px 16px #10291c33}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}.brand{font-weight:850;font-size:1.22rem;letter-spacing:.2px;text-decoration:none}.brand span{font-size:1.45rem;margin-right:7px}
+    nav{display:flex;gap:20px;flex-wrap:wrap}nav a{text-decoration:none;font-size:.94rem;color:#e4efe5}nav a:hover{text-decoration:underline}
+    .hero{background:linear-gradient(115deg,#173d2b 0%,#286342 60%,#6d8b52 100%);color:white;padding:78px 0 72px;overflow:hidden;position:relative}
+    .hero:after{content:"🌳";position:absolute;font-size:230px;right:5%;bottom:-65px;opacity:.14;pointer-events:none}
+    .hero-inner{max-width:720px;position:relative;z-index:1}.eyebrow{color:#f0d58e;font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.78rem}
+    h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.04;margin:14px 0 18px;letter-spacing:-2px}.hero p{font-size:1.16rem;color:#e6f0e6;max-width:620px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:12px 20px;border-radius:999px;background:var(--gold);color:#203329;text-decoration:none;font-weight:800;border:2px solid var(--gold)}.btn.secondary{background:transparent;color:white;border-color:#d7e7d8}
+    section{padding:66px 0;scroll-margin-top:78px}.section-head{max-width:700px;margin-bottom:28px}.kicker{color:var(--leaf);font-weight:850;text-transform:uppercase;letter-spacing:1.6px;font-size:.76rem}h2{font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.15;color:var(--forest);margin:8px 0 12px}h3{margin:0 0 8px;color:var(--forest)}.muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid #e3e9df;border-radius:20px;padding:23px;box-shadow:0 8px 24px #183c2810}.card .emoji{font-size:2rem;display:block;margin-bottom:12px}.card p{margin:0;color:var(--muted)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}.panel{background:var(--mint);border-radius:24px;padding:28px}.panel.water{background:#e7f2f5}.panel ul{padding-left:20px;margin-bottom:0}.panel li{margin:9px 0}
+    .band{background:var(--forest);color:white}.band h2{color:white}.band .muted{color:#d7e5d9}
+    .challenge{display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid #e2e9df;border-radius:16px;padding:16px;margin:10px 0}.challenge input{width:20px;height:20px;margin-top:4px;accent-color:var(--leaf)}.challenge label{cursor:pointer}.progress{height:10px;background:#dce8da;border-radius:20px;overflow:hidden;margin:16px 0 8px}.progress>div{height:100%;width:0;background:var(--leaf);transition:width .2s}
+    .quiz{background:white;border-radius:22px;padding:26px;border:1px solid #e3e9df}.quiz button{border:1px solid #cbd8c9;background:#f7faf5;padding:10px 14px;border-radius:12px;margin:6px 6px 0 0;cursor:pointer;font:inherit}.quiz button:hover{border-color:var(--leaf);background:var(--mint)}#quiz-result{font-weight:750;margin-top:12px;min-height:28px}
+    .pledge{background:#f1e8d2;border-radius:22px;padding:28px;text-align:center}.pledge strong{font-size:1.35rem;color:var(--forest)}
+    footer{background:#102c1e;color:#dce9dc;padding:34px 0}footer a{color:#f0d58e}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .small{font-size:.88rem;color:#bdcfc0}.notice{font-size:.88rem;background:#fff7df;border-left:4px solid var(--gold);padding:13px 16px;border-radius:8px;color:#594b2a}
+    @media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding:58px 0}.hero:after{font-size:150px;right:-10px}.grid{grid-template-columns:1fr}.split{grid-template-columns:1fr}section{padding:48px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span>🌿</span>Nature Heroes</a>
+    <nav aria-label="Main navigation">
+      <a href="#trees">Save Trees</a><a href="#water">Save Water</a><a href="#action">Take Action</a><a href="#schools">For Schools</a><a href="#learn">Quick Quiz</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-inner">
+      <div class="eyebrow">One planet · One shared responsibility</div>
+      <h1>Small actions.<br>Greener planet.</h1>
+      <p>Welcome to Nature Heroes — a free worldwide place to learn, share good habits and take simple steps to protect trees, save water and care for nature.</p>
+      <div class="actions"><a class="btn" href="#action">Start your nature mission</a><a class="btn secondary" href="#learn">Learn something new</a></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Our shared home</div><h2>Every living thing needs a healthy planet</h2><p class="muted">Forests support wildlife, help regulate the climate and protect soil. Fresh water is essential for people, plants and animals. Our everyday choices can make a difference.</p></div>
+      <div class="grid">
+        <article class="card"><span class="emoji">🌳</span><h3>Protect forests</h3><p>Care for trees, avoid wasting paper and support the protection of natural habitats.</p></article>
+        <article class="card"><span class="emoji">💧</span><h3>Value every drop</h3><p>Use water thoughtfully, repair leaks and keep rivers, lakes and oceans clean.</p></article>
+        <article class="card"><span class="emoji">🦋</span><h3>Respect wildlife</h3><p>Give animals space, protect biodiversity and leave natural places better than you found them.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="trees" style="background:#eef4e9">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Mission 01</div><h2>🌳 Save trees, protect life</h2><p class="muted">Trees provide habitats, store carbon, help cool places and reduce soil erosion. Protecting existing forests is important.</p></div>
+      <div class="grid">
+        <article class="card"><span class="emoji">📄</span><h3>Use less paper</h3><p>Write on both sides, reuse scrap paper and choose digital notes when practical.</p></article>
+        <article class="card"><span class="emoji">🌱</span><h3>Grow native plants</h3><p>Choose suitable local trees and plants. Ask local experts about the right species and planting season.</p></article>
+        <article class="card"><span class="emoji">🛡️</span><h3>Protect habitats</h3><p>Support responsible forest care and avoid damaging plants or disturbing wildlife.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="water">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Mission 02</div><h2>💧 Save water, protect tomorrow</h2><p class="muted">Clean water is precious. Saving water also helps reduce the energy and resources used to treat and move it.</p></div>
+      <div class="split">
+        <div class="panel water"><h3>At home</h3><ul><li>Turn off the tap while brushing your teeth.</li><li>Take shorter showers where possible.</li><li>Run washing machines with full loads.</li><li>Tell an adult when you notice a leak.</li><li>Water gardens when it is cooler, following local guidance.</li></ul></div>
+        <div class="panel"><h3>In your community</h3><ul><li>Never throw rubbish, oil or chemicals into drains or waterways.</li><li>Use refillable bottles where safe drinking water is available.</li><li>Join a local river, beach or park clean-up.</li><li>Learn about water challenges in your region.</li><li>Share water-saving ideas with friends and family.</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="action">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker" style="color:#f0d58e">Your nature mission</div><h2>Try the 7-day Nature Heroes challenge</h2><p class="muted">Choose actions you can safely do. Tick them off as you complete them. Your checklist stays only in this browser and is not sent anywhere.</p></div>
+      <div class="grid">
+        <div>
+          <div class="challenge"><input type="checkbox" id="c1"><label for="c1"><strong>Day 1:</strong> Turn off the tap while brushing.</label></div>
+          <div class="challenge"><input type="checkbox" id="c2"><label for="c2"><strong>Day 2:</strong> Use both sides of a sheet of paper.</label></div>
+          <div class="challenge"><input type="checkbox" id="c3"><label for="c3"><strong>Day 3:</strong> Pick up litter safely with an adult or suitable gloves.</label></div>
+          <div class="challenge"><input type="checkbox" id="c4"><label for="c4"><strong>Day 4:</strong> Check for a dripping tap and tell someone who can fix it.</label></div>
+        </div>
+        <div>
+          <div class="challenge"><input type="checkbox" id="c5"><label for="c5"><strong>Day 5:</strong> Learn the name of one local tree or plant.</label></div>
+          <div class="challenge"><input type="checkbox" id="c6"><label for="c6"><strong>Day 6:</strong> Reuse a container or bag instead of taking a new one.</label></div>
+          <div class="challenge"><input type="checkbox" id="c7"><label for="c7"><strong>Day 7:</strong> Teach someone one way to save water or protect trees.</label></div>
+          <p id="progress-text" class="small">0 of 7 actions completed</p><div class="progress" aria-label="Challenge progress"><div id="progress-bar"></div></div>
+          <button class="btn" id="reset" type="button">Reset my checklist</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="schools" style="background:#eef4e9">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">For classrooms and communities</div><h2>Schools can grow a greener future</h2><p class="muted">Teachers, students, families and organisations can use these ideas for free. No account or sign-up is needed.</p></div>
+      <div class="grid">
+        <article class="card"><span class="emoji">🏫</span><h3>Classroom eco-team</h3><p>Choose a weekly water and energy monitor, create reminder posters and celebrate practical improvements.</p></article>
+        <article class="card"><span class="emoji">🪴</span><h3>Plant and observe</h3><p>Grow a suitable native plant, record its changes and learn what it needs to thrive.</p></article>
+        <article class="card"><span class="emoji">🌏</span><h3>Global nature lesson</h3><p>Compare local forests and water sources in different countries, using reliable educational sources.</p></article>
+      </div>
+      <p class="notice" style="margin-top:20px">Safety first: get permission before planting or organising a clean-up. Follow local environmental guidance and never handle unknown waste, chemicals or unsafe water.</p>
+    </div>
+  </section>
+
+  <section id="learn">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Learn and remember</div><h2>Quick nature quiz</h2><p class="muted">Test your knowledge. Choose an answer to see how you did.</p></div>
+      <div class="quiz">
+        <h3>Why are forests important?</h3>
+        <button type="button" data-answer="wrong">Only because they look beautiful</button>
+        <button type="button" data-answer="right">They support wildlife, store carbon and protect soil</button>
+        <button type="button" data-answer="wrong">They are useful only for making paper</button>
+        <div id="quiz-result" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap"><div class="pledge"><div class="kicker">A promise to our planet</div><p><strong>“I will respect nature, save water, protect trees and encourage others to do the same.”</strong></p><p class="muted">You do not need to sign up or share your name. Start with one small action today.</p><a class="btn" href="#action">Choose an action</a></div></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div><strong>🌿 Nature Heroes</strong><p class="small">A free learning project for a greener, healthier planet.</p></div>
+    <div class="small">No login · No personal information · No payments<br>Made to be shared worldwide.</div>
+  </div>
+  <div class="wrap small" style="margin-top:20px">© <span id="year"></span> Nature Heroes. Learn, care and take action.</div>
+</footer>
+<script>
+  const checks = [...document.querySelectorAll('.challenge input[type="checkbox"]')];
+  const bar = document.getElementById('progress-bar');
+  const progressText = document.getElementById('progress-text');
+  function updateProgress(){
+    const count = checks.filter(c => c.checked).length;
+    bar.style.width = `${count / checks.length * 100}%`;
+    progressText.textContent = `${count} of ${checks.length} actions completed`;
+  }
+  checks.forEach(c => c.addEventListener('change', updateProgress));
+  document.getElementById('reset').addEventListener('click', () => {
+    checks.forEach(c => c.checked = false);
+    updateProgress();
+  });
+  document.querySelectorAll('.quiz button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.getElementById('quiz-result').textContent =
+        button.dataset.answer === 'right' ? 'Correct! Forests are vital habitats and help keep ecosystems healthy. 🌳' : 'Not quite. Try again — forests do much more than look beautiful!';
+    });
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
