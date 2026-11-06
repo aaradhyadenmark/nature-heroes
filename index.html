@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#173d2b">
+
+<title>Green Earth | Save Trees, Save Earth</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f8ef;
+  color: #173d2b;
+  line-height: 1.6;
+}
+
+header {
+  background: #173d2b;
+  color: white;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #a8e6a0;
+}
+
+.hero {
+  min-height: 580px;
+  background:
+    linear-gradient(rgba(0,30,10,.45), rgba(0,30,10,.55)),
+    url("https://images.unsplash.com/photo-1448375240586-882707db888b?w=1800")
+    center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 65px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 21px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: #4caa50;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #267a35;
+}
+
+section {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.intro {
+  max-width: 850px;
+  margin: auto;
+  font-size: 18px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 270px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.card .emoji {
+  font-size: 48px;
+}
+
+.card h3 {
+  margin: 12px 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.action {
+  background: #dcefd5;
+}
+
+.mission {
+  background: #173d2b;
+  color: white;
+}
+
+.mission h2 {
+  color: #b8f0a8;
+}
+
+footer {
+  background: #102b1e;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+@media(max-width:600px) {
+  header {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  section h2 {
+    font-size: 29px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🌳 Green Earth</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#mission">Mission</a>
+    <a href="#importance">Why Trees?</a>
+    <a href="#action">Take Action</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<div class="hero" id="home">
+  <div class="hero-content">
+    <h1>🌍 Save Trees, Save Earth!</h1>
+    <p>
+      A worldwide mission to save trees, protect forests
+      and create a greener future for every generation.
+    </p>
+    <a href="#action" class="btn">Join Our Mission 🌱</a>
+  </div>
+</div>
+
+<!-- MISSION -->
+<section id="mission">
+  <h2>💚 Our Worldwide Mission</h2>
+  <p class="intro">
+    Green Earth is a global movement to inspire people,
+    families, schools and communities to protect nature.
+    We believe every person can make a difference.
+    One tree, one action and one community at a time.
+  </p>
+</section>
+
+<!-- IMPORTANCE -->
+<section id="importance">
+  <h2>🌿 Why Are Trees Important?</h2>
+
+  <div class="cards">
+    <div class="card">
+      <div class="emoji">🌬️</div>
+      <h3>Clean Air</h3>
+      <p>Trees absorb carbon dioxide and help keep our air fresh.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🐘</div>
+      <h3>Protect Wildlife</h3>
+      <p>Forests are homes for thousands of animal and bird species.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🌧️</div>
+      <h3>Support Nature</h3>
+      <p>Trees support the water cycle and protect healthy soil.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🌎</div>
+      <h3>Fight Climate Change</h3>
+      <p>Forests store carbon and help protect our planet.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOREST GALLERY -->
+<section>
+  <h2>🌳 Beautiful Nature, Our Responsibility</h2>
+  <p class="intro">
+    Every forest is precious. Let's protect our green planet.
+  </p>
+
+  <div class="gallery">
+    <img
+      src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700"
+      alt="Beautiful green forest">
+
+    <img
+      src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=700"
+      alt="Sunlight in a forest">
+
+    <img
+      src="https://images.unsplash.com/photo-1511497584788-876760111969?w=700"
+      alt="Green woodland">
+
+    <img
+      src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700"
+      alt="Nature and forest trees">
+  </div>
+</section>
+
+<!-- TAKE ACTION -->
+<section class="action" id="action">
+  <h2>🌱 Become a Nature Hero!</h2>
+  <p class="intro">
+    You don't need to be a scientist or an environmental expert.
+    You just need to care about our planet.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="emoji">🌱</div>
+      <h3>Plant Trees</h3>
+      <p>Plant native trees in your neighbourhood and school.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">💧</div>
+      <h3>Save Water</h3>
+      <p>Use water carefully and protect our natural resources.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">♻️</div>
+      <h3>Reduce Waste</h3>
+      <p>Reuse, recycle and reduce unnecessary waste.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL MESSAGE -->
+<section class="mission">
+  <h2>Together We Can Make a Difference!</h2>
+  <p class="intro">
+    Imagine a world where every child plants a tree,
+    every family protects nature and every community
+    works together for a greener tomorrow.
+  </p>
+  <br>
+  <h2>🌍 One Earth. One Mission. One Green Future.</h2>
+</section>
+
+<footer>
+  <h3>🌳 Green Earth – Nature Heroes</h3>
+  <p>A Worldwide Mission to Save Trees</p>
+  <p>© <span id="year"></span> Green Earth. Save Trees, Save Our Planet!</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
+
