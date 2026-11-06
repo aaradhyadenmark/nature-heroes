@@ -1,187 +1,104 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#173d2b">
-
-<title>Green Earth | Save Trees, Save Earth</title>
+<title>Nature Heroes | Save Trees, Save Earth</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+* { box-sizing: border-box; }
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f8ef;
-  color: #173d2b;
-  line-height: 1.6;
+  background: #f1f8e9;
+  color: #23432c;
 }
-
 header {
-  background: #173d2b;
+  background: #174d2b;
   color: white;
-  padding: 20px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  text-align: center;
+  padding: 35px 15px;
 }
-
-.logo {
-  font-size: 26px;
-  font-weight: bold;
+header h1 { font-size: 42px; margin: 5px; }
+nav {
+  background: #287442;
+  padding: 15px;
+  text-align: center;
 }
-
 nav a {
   color: white;
   text-decoration: none;
   margin: 10px;
   font-weight: bold;
 }
-
-nav a:hover {
-  color: #a8e6a0;
-}
-
-.hero {
-  min-height: 580px;
-  background:
-    linear-gradient(rgba(0,30,10,.45), rgba(0,30,10,.55)),
-    url("https://images.unsplash.com/photo-1448375240586-882707db888b?w=1800")
-    center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 40px 20px;
-}
-
-.hero-content {
-  max-width: 850px;
-}
-
-.hero h1 {
-  font-size: clamp(38px, 6vw, 65px);
-  line-height: 1.15;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 21px;
-  margin-bottom: 25px;
-}
-
-.btn {
-  display: inline-block;
-  background: #4caa50;
-  color: white;
-  padding: 14px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: #267a35;
-}
-
 section {
-  padding: 70px 8%;
+  padding: 35px 20px;
   text-align: center;
 }
-
-section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+h2 { color: #236337; }
+.hero {
+  background: linear-gradient(#dff2d5, #f1f8e9);
+  padding: 55px 20px;
 }
-
-.intro {
-  max-width: 850px;
-  margin: auto;
-  font-size: 18px;
-}
-
+.hero p { font-size: 20px; }
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
-  margin-top: 35px;
+  gap: 20px;
 }
-
 .card {
   background: white;
+  width: 250px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px #0002;
+}
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+button {
+  background: #278044;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  cursor: pointer;
+  margin: 8px;
+  font-size: 16px;
+}
+button:hover { background: #174d2b; }
+.fact { display: none; font-weight: bold; }
+.gallery img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 8px;
+}
+.quiz-box {
+  background: white;
+  max-width: 600px;
+  margin: auto;
   padding: 25px;
   border-radius: 15px;
-  width: 270px;
-  box-shadow: 0 5px 20px rgba(0,0,0,.08);
 }
-
-.card .emoji {
-  font-size: 48px;
+.question { margin: 20px 0; }
+.question label {
+  display: block;
+  text-align: left;
+  padding: 5px;
 }
-
-.card h3 {
-  margin: 12px 0;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  border-radius: 14px;
-}
-
-.action {
-  background: #dcefd5;
-}
-
-.mission {
-  background: #173d2b;
-  color: white;
-}
-
-.mission h2 {
-  color: #b8f0a8;
-}
-
+#result { font-size: 20px; font-weight: bold; }
 footer {
-  background: #102b1e;
+  background: #174d2b;
   color: white;
   text-align: center;
-  padding: 30px 15px;
-}
-
-@media(max-width:600px) {
-  header {
-    justify-content: center;
-    gap: 12px;
-  }
-
-  nav a {
-    margin: 5px;
-    font-size: 14px;
-  }
-
-  section h2 {
-    font-size: 29px;
-  }
+  padding: 22px;
 }
 </style>
 </head>
@@ -189,148 +106,204 @@ footer {
 <body>
 
 <header>
-  <div class="logo">🌳 Green Earth</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#mission">Mission</a>
-    <a href="#importance">Why Trees?</a>
-    <a href="#action">Take Action</a>
-  </nav>
+  <h1>🌍 Nature Heroes 🌳</h1>
+  <p>Save Trees, Save Earth!</p>
 </header>
 
-<!-- HOME -->
-<div class="hero" id="home">
-  <div class="hero-content">
-    <h1>🌍 Save Trees, Save Earth!</h1>
-    <p>
-      A worldwide mission to save trees, protect forests
-      and create a greener future for every generation.
-    </p>
-    <a href="#action" class="btn">Join Our Mission 🌱</a>
-  </div>
-</div>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#animals">Animals</a>
+  <a href="#gallery">Pictures</a>
+  <a href="#quiz">Quiz</a>
+  <a href="#action">Take Action</a>
+</nav>
 
-<!-- MISSION -->
-<section id="mission">
-  <h2>💚 Our Worldwide Mission</h2>
-  <p class="intro">
-    Green Earth is a global movement to inspire people,
-    families, schools and communities to protect nature.
-    We believe every person can make a difference.
-    One tree, one action and one community at a time.
-  </p>
+<section class="hero" id="home">
+  <h2>Welcome, Nature Heroes! 💚</h2>
+  <p>Our planet is beautiful. Let's protect it together!</p>
+  <p>🌳 Plant trees | 🐼 Protect animals | 💧 Save water</p>
+  <a href="#animals"><button>Meet the Animals!</button></a>
 </section>
 
-<!-- IMPORTANCE -->
-<section id="importance">
-  <h2>🌿 Why Are Trees Important?</h2>
+<section id="animals">
+  <h2>🐾 Meet Our Amazing Animals</h2>
+  <p>Click the button to discover a fun animal fact!</p>
 
   <div class="cards">
+
     <div class="card">
-      <div class="emoji">🌬️</div>
-      <h3>Clean Air</h3>
-      <p>Trees absorb carbon dioxide and help keep our air fresh.</p>
+      <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=500" alt="Panda">
+      <h3>🐼 Panda</h3>
+      <button onclick="showFact('panda')">Discover a Fact</button>
+      <p class="fact" id="panda">Pandas love eating bamboo!</p>
     </div>
 
     <div class="card">
-      <div class="emoji">🐘</div>
-      <h3>Protect Wildlife</h3>
-      <p>Forests are homes for thousands of animal and bird species.</p>
+      <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=500" alt="Elephant">
+      <h3>🐘 Elephant</h3>
+      <button onclick="showFact('elephant')">Discover a Fact</button>
+      <p class="fact" id="elephant">Elephants use their trunks to drink water!</p>
     </div>
 
     <div class="card">
-      <div class="emoji">🌧️</div>
-      <h3>Support Nature</h3>
-      <p>Trees support the water cycle and protect healthy soil.</p>
+      <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=500" alt="Turtle">
+      <h3>🐢 Turtle</h3>
+      <button onclick="showFact('turtle')">Discover a Fact</button>
+      <p class="fact" id="turtle">Sea turtles can travel long distances in the ocean!</p>
     </div>
 
     <div class="card">
-      <div class="emoji">🌎</div>
-      <h3>Fight Climate Change</h3>
-      <p>Forests store carbon and help protect our planet.</p>
+      <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=500" alt="Lion">
+      <h3>🦁 Lion</h3>
+      <button onclick="showFact('lion')">Discover a Fact</button>
+      <p class="fact" id="lion">A lion's roar can be heard from far away!</p>
     </div>
+
   </div>
 </section>
 
-<!-- FOREST GALLERY -->
-<section>
-  <h2>🌳 Beautiful Nature, Our Responsibility</h2>
-  <p class="intro">
-    Every forest is precious. Let's protect our green planet.
-  </p>
-
+<section id="gallery">
+  <h2>🌲 Beautiful Nature Gallery</h2>
+  <p>Look at the wonderful world we must protect.</p>
   <div class="gallery">
-    <img
-      src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700"
-      alt="Beautiful green forest">
-
-    <img
-      src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=700"
-      alt="Sunlight in a forest">
-
-    <img
-      src="https://images.unsplash.com/photo-1511497584788-876760111969?w=700"
-      alt="Green woodland">
-
-    <img
-      src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700"
-      alt="Nature and forest trees">
+    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=500" alt="Forest">
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=500" alt="Mountain lake">
+    <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=500" alt="Deer in nature">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500" alt="Green landscape">
+    <img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=500" alt="Green trees">
+    <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=500" alt="Sunrise">
   </div>
 </section>
 
-<!-- TAKE ACTION -->
-<section class="action" id="action">
+<section id="quiz">
+  <h2>🧠 Nature Heroes Quiz!</h2>
+  <p>Let's see how much you know about nature!</p>
+
+  <div class="quiz-box">
+    <form id="quizForm">
+
+      <div class="question">
+        <h3>1. What do pandas eat?</h3>
+        <label><input type="radio" name="q1" value="a"> Pizza</label>
+        <label><input type="radio" name="q1" value="b"> Bamboo</label>
+        <label><input type="radio" name="q1" value="c"> Chocolate</label>
+      </div>
+
+      <div class="question">
+        <h3>2. What should we save?</h3>
+        <label><input type="radio" name="q2" value="a"> Water</label>
+        <label><input type="radio" name="q2" value="b"> Plastic waste</label>
+        <label><input type="radio" name="q2" value="c"> Pollution</label>
+      </div>
+
+      <div class="question">
+        <h3>3. Which animal has a long trunk?</h3>
+        <label><input type="radio" name="q3" value="a"> Lion</label>
+        <label><input type="radio" name="q3" value="b"> Elephant</label>
+        <label><input type="radio" name="q3" value="c"> Rabbit</label>
+      </div>
+
+      <div class="question">
+        <h3>4. What do trees give us?</h3>
+        <label><input type="radio" name="q4" value="a"> Clean air</label>
+        <label><input type="radio" name="q4" value="b"> Plastic</label>
+        <label><input type="radio" name="q4" value="c"> Smoke</label>
+      </div>
+
+      <div class="question">
+        <h3>5. Which bin should we use for recycling?</h3>
+        <label><input type="radio" name="q5" value="a"> A recycling bin</label>
+        <label><input type="radio" name="q5" value="b"> The ocean</label>
+        <label><input type="radio" name="q5" value="c"> The forest</label>
+      </div>
+
+      <button type="submit">Check My Answers!</button>
+    </form>
+
+    <p id="result"></p>
+    <button onclick="resetQuiz()">Try Again 🔄</button>
+  </div>
+</section>
+
+<section id="action">
   <h2>🌱 Become a Nature Hero!</h2>
-  <p class="intro">
-    You don't need to be a scientist or an environmental expert.
-    You just need to care about our planet.
-  </p>
+  <p>Every small action makes a big difference.</p>
+  <p>💧 Turn off taps when not needed.</p>
+  <p>♻️ Recycle paper and plastic.</p>
+  <p>🌳 Plant and protect trees.</p>
 
-  <div class="cards">
-    <div class="card">
-      <div class="emoji">🌱</div>
-      <h3>Plant Trees</h3>
-      <p>Plant native trees in your neighbourhood and school.</p>
-    </div>
-
-    <div class="card">
-      <div class="emoji">💧</div>
-      <h3>Save Water</h3>
-      <p>Use water carefully and protect our natural resources.</p>
-    </div>
-
-    <div class="card">
-      <div class="emoji">♻️</div>
-      <h3>Reduce Waste</h3>
-      <p>Reuse, recycle and reduce unnecessary waste.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL MESSAGE -->
-<section class="mission">
-  <h2>Together We Can Make a Difference!</h2>
-  <p class="intro">
-    Imagine a world where every child plants a tree,
-    every family protects nature and every community
-    works together for a greener tomorrow.
-  </p>
-  <br>
-  <h2>🌍 One Earth. One Mission. One Green Future.</h2>
+  <h3>🌳 My Tree Planting Counter</h3>
+  <p>Trees planted: <strong id="treeCount">0</strong></p>
+  <button onclick="plantTree()">I Planted a Tree! 🌱</button>
+  <p>Let's make our planet greener!</p>
 </section>
 
 <footer>
-  <h3>🌳 Green Earth – Nature Heroes</h3>
-  <p>A Worldwide Mission to Save Trees</p>
-  <p>© <span id="year"></span> Green Earth. Save Trees, Save Our Planet!</p>
+  <h3>🌍 Nature Heroes</h3>
+  <p>Small Actions, Big Changes!</p>
+  <p>Made with 💚 for our beautiful planet.</p>
+  <p>© <span id="year"></span> Nature Heroes</p>
 </footer>
 
 <script>
+function showFact(id) {
+  const fact = document.getElementById(id);
+  fact.style.display =
+    fact.style.display === "block" ? "none" : "block";
+}
+
+let trees = 0;
+
+function plantTree() {
+  trees++;
+  document.getElementById("treeCount").textContent = trees;
+}
+
 document.getElementById("year").textContent =
   new Date().getFullYear();
+
+document.getElementById("quizForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const answers = {
+    q1: "b",
+    q2: "a",
+    q3: "b",
+    q4: "a",
+    q5: "a"
+  };
+
+  let score = 0;
+
+  for (let question in answers) {
+    const selected = document.querySelector(
+      'input[name="' + question + '"]:checked'
+    );
+
+    if (selected && selected.value === answers[question]) {
+      score++;
+    }
+  }
+
+  let message = "";
+
+  if (score === 5) {
+    message = "🏆 Amazing! You are a Nature Superstar!";
+  } else if (score >= 3) {
+    message = "🌟 Great job! Keep learning!";
+  } else {
+    message = "💚 Good try! Learn and try again!";
+  }
+
+  document.getElementById("result").textContent =
+    "You scored " + score + " out of 5! " + message;
+});
+
+function resetQuiz() {
+  document.getElementById("quizForm").reset();
+  document.getElementById("result").textContent = "";
+}
 </script>
 
 </body>
 </html>
-
-
